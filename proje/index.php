@@ -6,15 +6,8 @@ require_once 'system/MFunctions.php';
 require_once 'system/MUpload.php';
 require_once 'system/MDatabase.php';
 
-if (!get("url")) {
 
-	$file = "anasayfa";
-
-}else{
-
-	$file = get("url");
-
-}
+$file = !get("url")?"anasayfa":get("url");
 
 $file ="app/". $file .".php";
 
